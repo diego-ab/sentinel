@@ -87,7 +87,7 @@ class GovernanceObject(BaseModel):
 
         for item in golist.values():
             try:
-                (go, subobj) = self.import_gobject_from_dashd(dashd, item)
+                (go, subobj) = self.import_gobject_from_terracoind(terracoind, item)
             except Exception as e:
                 printdbg("Got an error upon import: %s" % e)
 
